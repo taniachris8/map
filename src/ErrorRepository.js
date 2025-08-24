@@ -1,10 +1,11 @@
 export default class ErrorRepository { 
     constructor(){ 
-        this.repository = new Map();
-        this.repository.set(212, "SyntaxError: Invalid or unexpected token");
-        this.repository.set(213, "SyntaxError: missing ) after condition");
-        this.repository.set(214, "SyntaxError: unterminated string literal");
-        this.repository.set(215, "SyntaxError: Unexpected token '{'");
+        this.repository = new Map([
+            [212, "SyntaxError: Invalid or unexpected token"],
+            [213, "SyntaxError: missing ) after condition"],
+            [214, "SyntaxError: unterminated string literal"],
+            [215, "SyntaxError: Unexpected token '{'"],
+        ]);
     }
 
     translate(code) {
